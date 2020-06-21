@@ -1,0 +1,17 @@
+*.obj
+.*.sw?
+*.pdb
+*.tlb
+*.res
+*.exe
+*.manifest
+*.exp
+*.ilk
+*.lib
+*.udb
+*.msi
+*.wixobj
+*.wixpdb
+*.dll
+compile_commands.json
+build-*/
