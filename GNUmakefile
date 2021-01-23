@@ -1,6 +1,6 @@
 include ../GNUmakefile.common
 
-LDLIBS+=user32 shell32
+LDLIBS+=user32
 
 all: run.exe
 
