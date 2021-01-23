@@ -1,11 +1,11 @@
 # Minimal run
 
-This is a minimal tiny C program for running Windows commands with a hidden
+This is a tiny C program for running Windows commands with a hidden
 console. It's suitable for use in Windows shortcuts, i.e. lnk files.
 
 I use `run.exe wsl --exec xterm -display :0` to launch an XTerm on Windows.
 
-If you don't want to compile it yourself, check the Releases section.
+If you don't want to compile it yourself, check the [Releases](https://github.com/taviso/minirun/releases) section.
 
 # Building
 
