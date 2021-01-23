@@ -29,7 +29,7 @@ shortcut should look something like this.
 First try this to make sure run is working:
 
 ```
-run.exe notepad
+run.exe calc
 ```
 
 If that does work, but starting a wsl application doesn't work, it may be a
