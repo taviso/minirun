@@ -15,6 +15,8 @@ If you don't want to compile it yourself, check the Releases section.
 > cl.exe /nologo  /Zi /O2 /guard:cf /GF /MT /Fe:run.exe run.obj resource.res /link  user32.lib
 ```
 
+> Note: You need to build it as a 64bit application to access wsl.exe.
+
 # Screenshot
 
 You can't see it running because it's designed to be invisible! Your
@@ -33,14 +35,14 @@ run.exe notepad
 If that does work, but starting a wsl application doesn't work, it may be a
 PATH issue.
 
-Try using the full instead, like this:
+Try using the full path instead, like this:
 
 ```
 run.exe wsl --exec /usr/bin/program
 ```
 
-If you need to set DISPLAY or some other variable, use env. For example, like
-this:
+If you need to set `$DISPLAY` or some other variable, use `env`. For example,
+like this:
 
 ```
 run.exe wsl --exec env DISPLAY=:0 /usr/bin/program
