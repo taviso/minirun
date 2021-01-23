@@ -1,14 +1,24 @@
 # Minimal run
 
 This is a minimal tiny C program for running Windows commands with a hidden
-console.
+console. It's suitable for use in Windows shortcuts, i.e. lnk files.
 
 I use `run.exe wsl --exec xterm -display :0` to launch an XTerm on Windows.
 
+If you don't want to compile it yourself, check the Releases section.
+
+# Building
+
+```
+> rc.exe /nologo resource.rc
+> cl.exe /nologo  /Zi /O2 /guard:cf /GF /c /Fo:run.obj run.c
+> cl.exe /nologo  /Zi /O2 /guard:cf /GF /MT /Fe:run.exe run.obj resource.res /link  user32.lib
+```
+
 # Screenshot
 
-You can't see it running because it is designed to be invisible, but your
-shortcut should look like this.
+You can't see it running because it's designed to be invisible! Your
+shortcut should look something like this.
 
 ![Screenshot](xterm-example.png)
 
