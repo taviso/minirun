@@ -56,3 +56,12 @@ run.exe wsl --exec /bin/sh /full/path/to/script.sh
 
 > If it's not a shell script, use the correct interpreter.. e.g. `/usr/bin/perl`.
 
+Are you trying to use `$DISPLAY` in wsl2? You might need a script to get the right address, save this as display.sh
+
+```sh
+#!/bin/sh
+DISPLAY=$(awk '/nameserver/ {print $2; exit}' /etc/resolv.conf):0 exec "${@}"
+```
+
+Now you can do `run.exe wsl --exec /bin/sh /path/to/display.sh /usr/bin/xterm`
+
