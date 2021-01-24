@@ -48,10 +48,11 @@ like this:
 run.exe wsl --exec env DISPLAY=:0 /usr/bin/program
 ```
 
-If you have multiple distributions installed, remember to specify the one you
-want, e.g.
+Are you trying to run a script? It might be a permissions issue, try this:
 
 ```
-run.exe wsl --distribution Debian --exec /usr/bin/foobar
+run.exe wsl --exec /bin/sh /full/path/to/script.sh
 ```
+
+> If it's not a shell script, use the correct interpreter.. e.g. `/usr/bin/perl`.
 
